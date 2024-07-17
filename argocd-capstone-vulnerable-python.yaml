@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: capstone-chart-vulnerable-python
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/elysiansky/capstone-chart-vulnerable-python'
+    targetRevision: main
+    path: .
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: capstone
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
