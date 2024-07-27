@@ -7,7 +7,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # Array of manifest files
-manifests=("argocd-metallb.yaml" "argocd-kong.yaml" "argocd-capstone-vulnerable-php83.yaml")
+manifests=("01-argocd-metallb.yaml" "02-argocd-traefik.yaml")
 
 # Loop through each manifest file and apply it
 for manifest in "${manifests[@]}"; do
