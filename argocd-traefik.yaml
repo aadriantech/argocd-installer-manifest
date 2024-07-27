@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: metallb
+  name: traefik
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/aadriantech/helm-chart-metallb.git'
+    repoURL: 'https://github.com/aadriantech/helm-chart-traefik.git'
     targetRevision: main
     path: .
   destination:
     server: https://kubernetes.default.svc
-    namespace: metallb-system
+    namespace: traefik
   syncPolicy:
     automated:
       prune: true

@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/elysiansky/capstone-chart-kong-gateway.git'
+    repoURL: 'https://github.com/aadriantech/helm-chart-kong-gateway.git'
     targetRevision: main
     path: .
   destination:

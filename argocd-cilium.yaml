@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/elysiansky/capstone-cilium.git'
+    repoURL: 'https://github.com/aadriantech/helm-chart-cilium.git'
     targetRevision: main
     path: .
   destination:
