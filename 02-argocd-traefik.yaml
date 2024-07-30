@@ -9,6 +9,10 @@ spec:
     repoURL: 'https://github.com/aadriantech/helm-chart-traefik.git'
     targetRevision: main
     path: .
+    helm:
+      valueFiles:
+        - values.yaml          # Default values file
+        - values-dashboard-enabled.yaml   # Additional values file (use your custom file here)
   destination:
     server: https://kubernetes.default.svc
     namespace: traefik
